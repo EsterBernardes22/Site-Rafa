@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Rafa</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="login_cadastro.js"></script>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form class="form">
+        <div class="header">
+            <div class="headline">
+                <h2>Faça Login para começar</h2>
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="image/logoRafa.png" alt="Logo">
+        </div>
+        <br>
+        <br>
+
+        <input class="input" placeholder="Email" type="text">
+        <input class="input" placeholder="Senha" type="password">
+        <p>Não tem cadastro ainda? <a href="cadastro.html">Cadastrar-se</a></p>
+        <button type="button" onclick="loginn()" class="btn">Entrar</button>
+    </form>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBn6-thJEEwwXbtYqAJjxPxtgVIAEzUA2o",
+            authDomain: "mathrafa-58826.firebaseapp.com",
+            projectId: "mathrafa-58826",
+            storageBucket: "mathrafa-58826.appspot.com",
+            messagingSenderId: "272226767018",
+            appId: "1:272226767018:web:1dff2124c6782c67ce40d3",
+            measurementId: "G-MDC2W8YETY"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        var auth = null;
+
+        function loginn() {
+            var email = document.getElementById("email").value;
+            var senha = document.getElementById("senha").value;
+
+            firebase.auth().signInWithEmailAndPassword(email, senha)
+                .then(function (userCredential) {
+                    // Retrieve user's name (this should be retrieved from your database, here it's a placeholder)
+                    var nome = document.getElementById("nome").value;
+                    localStorage.setItem("userName", nome);
+                    alert("Logado com sucesso");
+                    window.location.href = "index.html";
+                }).catch(function (error) {
+                    alert("Falha ao logar: " + error.message);
+                });
+        }
+    </script>
+
+</body>
+
+</html>

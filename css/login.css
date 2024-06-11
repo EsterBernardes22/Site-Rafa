@@ -1,0 +1,128 @@
+body{
+    background-image: url('../image/fundo_login.png'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+
+
+/* -----------------------------------------------------------------------------------------------------*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+    /* Cor principal */
+    padding: 5em;
+    /* Reduzindo o padding */
+    border-radius: 15px;
+    /* Ajustando para um valor menor para deixar mais quadrado */
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+    max-width: 500px;
+    /* Reduzindo a largura máxima */
+    margin: 0 auto;
+    /* Centralizando horizontalmente */
+}
+
+.form:hover {
+    transform: translateX(-0.5em) translateY(-0.5em);
+    box-shadow: 10px 10px 0px #ed6b00, rgba(0, 0, 0, 0.4) 1px 2px 2px; /* Adicionando a sombra novamente */
+}
+
+.logo img {
+    width: 200px; /* Defina a largura desejada */
+    height: auto; /* Mantenha a proporção */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    display: block; /* Permite centralização */
+    margin-bottom: 10px; /* Adicione margem inferior para espaçamento */
+}
+
+.input {
+    border-radius: 5px;
+    border: 1px solid #ed6b00;
+    /* Cor secundária */
+    background-color: #fff;
+    outline: none;
+    padding: 0.7em;
+    transition: .4s ease-in-out;
+}
+
+.input:hover {
+    box-shadow: 6px 6px 0px #ffffff, -3px -3px 10px #ffffff;
+}
+
+.input:focus {
+    background: #ffffff;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.form .btn {
+    margin-top: 1.5em;
+    /* Reduzindo a margem superior */
+    font-size: 18px;
+    align-self: center;
+    padding: 0.6em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: .4s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+    background-color: #0086A4;
+    /* Cor secundária */
+}
+
+.form .btn:hover {
+    box-shadow: 6px 6px 0px #ed6b00, -3px -3px 10px #ffffff;
+    transform: translateX(-0.5em) translateY(-0.5em);
+}
+
+.form .btn:active {
+    transition: .2s;
+    transform: translateX(0em) translateY(0em);
+    box-shadow: none;
+}
+
+
+
+.form .header {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-bottom: 20px; /* Adiciona uma margem inferior para espaçamento */
+    width: 100%; /* Define a largura para 100% */
+}
+
+.form .headline {
+    background-color: #ffffff; /* Cor de fundo */
+    color: #0086A4; /* Cor do texto */
+    padding: 1px; /* Adiciona espaçamento interno */
+    border-radius: 10px; /* Adiciona borda arredondada */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Adiciona sombra */
+    width: 100%; /* Define a largura do container */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    font-size: 25px;
+    display: inline-block; /* Permite que o elemento se comporte como uma linha */
+    vertical-align: middle; /* Alinha verticalmente */
+    text-align: center;
+}
+
+.form .headline h2 {
+    margin-top: 0; /* Remove a margem superior do título */
+}
+
+.form .headline p {
+    margin-bottom: 0; /* Remove a margem inferior do parágrafo */
+}
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------*/
